@@ -10,7 +10,7 @@ deploy_data_dir := $(deploy_prefix)/frida-java-tests
 
 frida_version := 10.0.10
 
-test_sources := $(wildcard re/frida/*.java)
+test_sources := $(wildcard re/frida/*.java) $(wildcard com/google/ccc/abuse/droidguard/*.java)
 test_classes := $(patsubst %.java,%.class,$(test_sources))
 
 android_jar := $(ANDROID_SDK_ROOT)/platforms/$(android_platform)/android.jar
