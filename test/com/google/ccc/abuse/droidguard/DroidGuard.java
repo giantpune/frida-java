@@ -21,6 +21,7 @@ public class DroidGuard {
     public static void Log( String t )
     {
         Log.e( LOG_TAG, t );
+        System.out.println( t );
     }
 
     public static String bytesToHex(byte[] bytes) {
@@ -38,6 +39,11 @@ public class DroidGuard {
     public DroidGuard(Context arg5, Parcelable arg6) {
         super();
         Parcelable v0 = arg6;
+        if( arg5 == null || arg6 == null )
+        {
+            Log.e( LOG_TAG, "that shit was null" );
+            return;
+        }
         byte[] v1 = ((Bundle)v0).getByteArray("c");
         byte[] v2 = ((Bundle)v0).getByteArray("b");
         String b = ((Bundle)v0).getString("d");

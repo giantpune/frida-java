@@ -3,6 +3,7 @@ package re.frida;
 import java.io.DataInputStream;
 import java.io.File;
 import java.io.FileInputStream;
+//import droidguard.abuse.ccc.google.com;
 
 import org.junit.runner.JUnitCore;
 
@@ -21,9 +22,10 @@ public class TestRunner {
         registerClassLoader(TestRunner.class.getClassLoader());
 
         JUnitCore.main(
-            "re.frida.ClassRegistryTest",
-            "re.frida.MethodTest",
-            "re.frida.ClassCreationTest"
+        //    "re.frida.ClassRegistryTest",
+        //    "re.frida.MethodTest",
+        //    "re.frida.ClassCreationTest"
+              "droidguard.abuse.ccc.google.com.DroidGuardTest"
         );
     }
 

@@ -21,7 +21,7 @@ all:
 clean:
 	rm -rf build
 
-deploy: build/$(ANDROID_ABI)/runner build/tests.dex build/frida-java.js
+deploy: build/$(ANDROID_ABI)/runner build/tests.dex build/frida-java.js test.js
 	adb shell "rm -rf $(deploy_data_dir) && mkdir -p $(deploy_data_dir) && mkdir -p $(deploy_data_dir)/dalvik-cache"
 	adb push $^ $(deploy_data_dir)
 
