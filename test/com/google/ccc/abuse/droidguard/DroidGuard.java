@@ -64,8 +64,15 @@ public class DroidGuard {
         super();
         Log("DroidGuard(Context arg2, String arg3, byte[] arg4, Object arg5)");
         Log( "arg3: " + arg3 );
-        Log( "arg4: " + bytesToHex(arg4) );
-        Log( "arg5: " + arg5.toString() );
+        
+        String str = bytesToHex(arg4);
+        int len = str.length;
+        if( len > 100 )
+        {
+            str = str.substring( 0, 100 ) + "..."
+        }
+        Log( "arg4: " + str );
+        Log( "arg5: " + (arg5 == null ? "null" : arg5.toString() ) );
     }
 
     public DroidGuard(Context arg2, String arg3, byte[] arg4, Object arg5, boolean arg6) {
@@ -73,7 +80,7 @@ public class DroidGuard {
         Log("DroidGuard(Context arg2, String arg3, byte[] arg4, Object arg5, boolean arg6)");
         Log( "arg3: " + arg3 );
         Log( "arg4: " + bytesToHex(arg4) );
-        Log( "arg5: " + arg5.toString() );
+        Log( "arg5: " + (arg5 == null ? "null" : arg5.toString() ) );
         Log( "arg6: " + arg6 );
     }
 
@@ -107,10 +114,7 @@ public class DroidGuard {
         return null;
     }
 
-    public byte[] run(Map arg7) {
-        Log("run(): " + arg7.toString());
-        return null;
-    }
+    public native byte[] run(Map arg7)
 
     public byte[] ss(Map arg5) {
         Log("ss(): " + arg5.toString());
