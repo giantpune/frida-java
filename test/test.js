@@ -1,10 +1,14 @@
-var Object = Java.use('java.lang.Object');
+
+// obv class which is the object they pass in to droidguard constructor
 var obv = Java.registerClass({
   name: 'obv',
-  implements: [Object],
   methods: {
-    getName: function () {
-      return 'Banana';
+    getName: {
+      returnType: 'java.lang.String',
+      argumentTypes: [],
+      implementation: function () {
+        return 'Fred';
+      },
     },
   }
 });

@@ -66,10 +66,10 @@ public class DroidGuard {
         Log( "arg3: " + arg3 );
         
         String str = bytesToHex(arg4);
-        int len = str.length;
+        int len = str.length();
         if( len > 100 )
         {
-            str = str.substring( 0, 100 ) + "..."
+            str = str.substring( 0, 100 ) + "...";
         }
         Log( "arg4: " + str );
         Log( "arg5: " + (arg5 == null ? "null" : arg5.toString() ) );
@@ -114,7 +114,7 @@ public class DroidGuard {
         return null;
     }
 
-    public native byte[] run(Map arg7)
+    public native byte[] run(Map arg7);
 
     public byte[] ss(Map arg5) {
         Log("ss(): " + arg5.toString());

@@ -65,7 +65,7 @@ public class DroidGuardTest {
         }
         
         DroidGuard dg = new DroidGuard( null, type, bytes, ob );
-        dg.Log( "Ok.  about to run" )
+        dg.Log( "Ok.  about to run" );
         dg.run( map );
         
         //System.out.println( "loaded the script: " + script );
@@ -76,7 +76,8 @@ public class DroidGuardTest {
     public void DroidGuardAdTest() throws ClassNotFoundException, InstantiationException, IllegalAccessException, Exception {
         String script = readFileAsString("/data/local/tmp/frida-java-tests/test.js");
         
-        /*loadScript( script );
+        System.out.println( "loading script: " + script );
+        loadScript( script );
         try
         {
             Class cl = Class.forName("obv");
@@ -85,7 +86,7 @@ public class DroidGuardTest {
         catch( Exception e )
         {
             e.printStackTrace();
-        }*/
+        }
         try
         {
           RunDroidGuardWithParameterFile( "/data/logging/droidParams1496861273.json");
